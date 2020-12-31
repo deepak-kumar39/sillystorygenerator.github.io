@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html lang="eng">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width">
 
-    <title>Silly story generator</title>
+  <title>Silly story generator</title>
 
-    <style>
-
-    body {
+  <style>
+  body {
       font-family: helvetica, sans-serif;
-      width: 350px;
+      width: 100vw;
+      box-sizing: border-box;
     }
 
     label {
-      font-weight: bold;  
+      font-weight: bold;
     }
 
     div {
@@ -34,44 +33,99 @@
       color: #5E2612;
       padding: 10px;
       visibility: hidden;
+      margin-right: 1.2em;
+
+    }
+
+    .container {
       
-    }
-    .container{
-        margin-top: 10% !important;
-        margin-left: auto;
-        font-size: large;
-        font-family: Arial, Helvetica, sans-serif;
-        position: fixed;
+      height: 450px;
+      font-size: large;
+      font-family: Arial, Helvetica, sans-serif;
+      position: absolute;
+      padding: 10px;
+      border: 2px solid black;
+     
     }
 
-    </style>
-  </head>
+    button{
+      background-color: aqua;
+    }
 
-  <body>
-      <div class="container p-3 bg-dark text-danger text-center" >
-          <div class="row">
-              <div class="col-lg-12 col-12 col-md-12 ">
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .container {background: lightblue;
+  width: 100vw;
+  left:0;
+  top:0;
+   
+}
+ 
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .container {background: green;
+  width: 260px;
+  left: 10em;
+ 
+  
+  
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .container {background: blue;
+    
+   left:16em;
+  top:20px;
+  }
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .container {background: orange;
+    
+   left:22em;
+  top:20px;}
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .container {background: pink;
+   
+   left:26em;
+  top:20px;}
+}
+
+   
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
     <div>
       <label for="customname">Enter custom name:</label>
-      <input id="customname" type="text" placeholder="">
+      <input id="customname" type="text" placeholder="Enter name">
     </div>
     <div>
       <label for="us">India</label><input id="us" type="radio" name="ukus" value="india" checked>
       <label for="uk">UK</label><input id="uk" type="radio" name="ukus" value="uk">
     </div>
     <div>
-      <button class="randomize" onclick="fun()">Generate random story</button>
+      <button class="randomize">Generate random story</button>
     </div>
-    <!-- Thanks a lot to Willy Aguirre for his help with the code for this assessment -->
-    <p class="story"></p>
-</div>
-</div>
-      </div>
-    
+  
+  
+  <!-- Thanks a lot to Willy Aguirre for his help with the code for this assessment -->
+  <p class="story"></p>
+  </div>
+  
 
-   <script src="main.js"></script> 
-   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
-  </body>
+
+
+<script src="main.js"></script>
+</body>
 </html>
